@@ -8,9 +8,11 @@ def my_account() :
     
             if accounts[host] == pass_key:
                 print("You've entered the secret chambers of programing")
+                break
     
             else:
                 print(f"{host} has entered the wrong password please try again.")
+                continue
         else:
             print(f"{host} was not found please try agin or create an account.")
             return no_account()
@@ -25,12 +27,15 @@ def no_account() :
         accounts[username] = passwords
         print(f"Thanks for signing up {username}")
 
-user = input("Have you made an account before? please type YES/NO : ").lower() # take user input / choice and lower case it for comparison below
+# take user input / choice and lower case it for comparison below
+user = input("Have you made an account before? please type YES/NO : ").lower() 
 if user == "yes" :
-    my_account()
-    
+    my_account()  
+
 else: 
     no_account()
+    my_account()
+
     
 
 
