@@ -23,7 +23,7 @@ def noAccount() :
         accounts[username] = passwords
         print(f"Thanks for signing up {username}")
 
-User = input("Have you made an account before? please type YES/NO : ").lower()
+User = input("Have you made an account before? please type YES/NO : ").lower() # take user input / choice and lower case it for comparison below
 if User == "yes" :
     mAccount()
     
